@@ -1,0 +1,6 @@
+package.json
+build/
+dist/
+node_modules/
+__snapshots__
+.history
