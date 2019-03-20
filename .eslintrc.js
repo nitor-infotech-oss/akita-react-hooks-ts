@@ -39,11 +39,7 @@ module.exports = {
       },
     ],
     'import/first': 0,
-    'import/extensions': [
-      2,
-      'always',
-      { yml: 'never', js: 'never', json: 'never' },
-    ],
+    'import/extensions': [2, 'always', { js: 'never', json: 'never' }],
     'import/no-named-as-default': 0,
     'arrow-body-style': 0,
     'no-else-return': 0,
@@ -61,7 +57,7 @@ module.exports = {
 
     // React
     'react/display-name': 0,
-    'react/jsx-boolean-value': 1, //check
+    'react/jsx-boolean-value': 1,
     'react/jsx-sort-props': 0,
     'react/jsx-sort-prop-types': 0,
     'react/jsx-uses-react': 1,
@@ -72,21 +68,21 @@ module.exports = {
     'react/no-unknown-property': 1,
     'react/prop-types': 1,
     'react/react-in-jsx-scope': 0,
-    'react/require-default-props': 0, // allow non-required props to no have default values
-    'react/jsx-filename-extension': 0, // allows JSX in js files
-    'react/sort-comp': 0, // Don't enforce a react prototype order
+    'react/require-default-props': 0,
+    'react/jsx-filename-extension': 0,
+    'react/sort-comp': 0,
     'react/forbid-prop-types': 0,
     'react/jsx-no-bind': 0,
-    'react/no-unused-prop-types': 1, // fix
+    'react/no-unused-prop-types': 1,
     'react/jsx-no-undef': [2, { allowGlobals: true }],
     'react/jsx-pascal-case': 0,
     'react/prefer-stateless-function': 0,
-    'react/no-string-refs': 1, // fix
-    'react/no-find-dom-node': 1, // fix
+    'react/no-string-refs': 1,
+    'react/no-find-dom-node': 1,
     'react/no-array-index-key': 0,
-    'react/prefer-es6-class': 0, // allow createClass for now, until legacy code migrated
+    'react/prefer-es6-class': 0,
 
-    'jsx-a11y/label-has-for': 1, // fix?
+    'jsx-a11y/label-has-for': 1,
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'jsx-a11y/tabindex-no-positive': 0,

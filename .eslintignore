@@ -1,6 +1,4 @@
 build/
-script/
-integrationTests/
 src/assets/
 src/styles/
 public/
