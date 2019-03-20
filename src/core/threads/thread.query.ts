@@ -9,8 +9,15 @@ export class ThreadQuery extends Query<ThreadState> {
   }
 
   public getThread = () => this.select(state => state.posts);
+
   public getIsSearching = () => this.select(state => state.isSearching);
+
+  public getIsLoading = () => this.select(state => state.isLoading);
+
   public getCurrentPost = () => this.select(state => state.selectedPost);
+
+  public getCurrentPostId = () => this.select(state => state.selectedPostId);
+
   public getCurrentPostComments = () =>
     this.select(state => state.selectedPostComments);
 }

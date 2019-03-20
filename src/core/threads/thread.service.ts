@@ -5,10 +5,20 @@ const BASE_URL = 'https://www.reddit.com/r/';
 export class ThreadService {
   constructor(private store: ThreadStore) {}
 
+  public closeCurrentPost = () => {
+    this.store.update(() => ({
+      selectedPostId: '',
+      selectedPost: null,
+    }));
+  };
+
   public getThread = (threadSlug: string) => {
     this.store.update(() => ({
       isSearching: true,
       threadSlug,
+      posts: [],
+      selectedPostId: '',
+      selectedPost: null,
     }));
 
     fetch(`${BASE_URL}${threadSlug}.json`)
@@ -19,7 +29,7 @@ export class ThreadService {
           posts: threads.data.children,
         })),
       )
-      .catch(error => this.store.update(() => ({ error })));
+      .catch(error => this.store.update(() => ({ error, isSearching: false })));
   };
 
   public getPost = (threadSlug: string, postId: string) => {
@@ -31,7 +41,7 @@ export class ThreadService {
 
     fetch(`${BASE_URL}${threadSlug}/${postId}.json`)
       .then(response => response.json())
-      .then(({ post, comments }) =>
+      .then(([post, comments]) =>
         this.store.update(() => ({
           isLoading: false,
           selectedPost: {
@@ -41,7 +51,7 @@ export class ThreadService {
           selectedPostComments: comments.data.children,
         })),
       )
-      .catch(error => this.store.update(() => ({ error })));
+      .catch(error => this.store.update(() => ({ error, isLoading: false })));
   };
 }
 

@@ -9,16 +9,6 @@ module.exports = {
     mocha: true,
     jest: true,
   },
-  globals: {
-    PROD: true,
-    LOCAL: true,
-    If: true,
-    Else: true,
-    For: true,
-    Choose: true,
-    When: true,
-    Otherwise: true,
-  },
   settings: {
     ecmascript: 6,
     jsx: true,
@@ -27,9 +17,8 @@ module.exports = {
     },
   },
   rules: {
-    // eslint number mapping: 0 = off, 1 = warning, 2 = error
-    'class-methods-use-this': 0, // its okay if instance methods do not use `this`
-    'eol-last': [2, 'always'], // enforces that files end with a newline
+    'class-methods-use-this': 0,
+    'eol-last': [2, 'always'],
     'no-multiple-empty-lines': [2, { max: 2 }],
     'no-unused-expressions': [2, { allowShortCircuit: true }],
     'no-plusplus': 0,

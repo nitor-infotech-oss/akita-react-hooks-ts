@@ -1,20 +1,18 @@
 import React from 'react';
 
-import Header from './Header';
+import SearchForm from './SearchForm';
 import { threadService } from '../../core/threads/thread.service';
 
-export const Layout = () => {
+export const Search = () => {
   const searchThread = (slug: string) => {
     threadService.getThread(slug);
   };
 
   return (
     <div>
-      <div>
-        <Header search={searchThread} />
-      </div>
+      <SearchForm search={searchThread} />
     </div>
   );
 };
 
-export default Layout;
+export default Search;

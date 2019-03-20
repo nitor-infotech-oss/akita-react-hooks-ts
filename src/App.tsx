@@ -1,27 +1,24 @@
 import React from 'react';
+import { akitaDevtools } from '@datorama/akita';
 
-import DocumentTitle from './DocumentTitle';
-import AppLayout from './components/Common/AppLayout';
-import ThreadList from './components/ThreadList';
-import logo from './logo.svg';
+import DocumentTitle from './components/Common/DocumentTitle';
+import Search from './components/Search/index';
+import Home from './components/Home/index';
 import './App.css';
+
+akitaDevtools();
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          <DocumentTitle prefix="Reddit Threads" listen />
-        </h1>
+        <DocumentTitle prefix="Reddit Threads" listen />
         <div>
-          <AppLayout />
+          <Search />
         </div>
       </header>
 
-      <div>
-        <ThreadList />
-      </div>
+      <Home />
     </div>
   );
 };

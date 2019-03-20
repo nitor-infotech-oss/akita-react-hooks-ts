@@ -13,14 +13,15 @@ export const SearchForm = ({ search }) => {
   };
 
   return (
-    <div>
+    <div className="form-inline">
       <input
         type="text"
+        className="form-control"
         onChange={updateThread}
         value={thread}
         placeholder="Search Thread"
       />
-      <button type="button" onClick={searchThread}>
+      <button type="button" className="btn btn-primary" onClick={searchThread}>
         Search
       </button>
     </div>

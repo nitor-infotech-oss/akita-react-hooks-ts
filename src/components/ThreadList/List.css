@@ -1,0 +1,27 @@
+ul {
+  list-style-type: none;
+  width: 95%;
+}
+
+h3.thread-title {
+  font: bold 14px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+li img {
+  float: left;
+}
+
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+li {
+  padding: 20px;
+  margin: 5px;
+  border: solid 1px;
+  overflow: auto;
+}
+
+li:hover {
+  background: #eee;
+}

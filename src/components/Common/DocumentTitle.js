@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
-interface IDocumentTitle {
-  prefix: string;
-  listen: boolean;
-}
-
-export const DocumentTitle = ({ prefix, listen }: IDocumentTitle) => {
+export const DocumentTitle = ({ prefix, listen }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     if (listen) {
-      const handler = (event: any) => {
+      const handler = event => {
         setPos({ x: event.clientX, y: event.clientY });
       };
       window.addEventListener('mousemove', handler);
@@ -19,13 +15,20 @@ export const DocumentTitle = ({ prefix, listen }: IDocumentTitle) => {
         window.removeEventListener('mousemove', handler);
       };
     }
+
+    return () => null;
   }, [listen]);
 
   useEffect(() => {
     document.title = `${prefix} - ${pos.x}, ${pos.y}`;
   }, [pos, prefix]);
 
-  return <div>{`${prefix} - ${pos.x}, ${pos.y}`}</div>;
+  return <h3>{`${prefix} - ${pos.x}, ${pos.y}`}</h3>;
+};
+
+DocumentTitle.propTypes = {
+  prefix: PropTypes.string,
+  listen: PropTypes.bool,
 };
 
 export default DocumentTitle;
