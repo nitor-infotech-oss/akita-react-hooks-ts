@@ -1,4 +1,4 @@
-export interface ThreadState {
+export interface IThreadState {
   threadSlug: string;
   posts: any[];
   selectedPostId: string;
@@ -10,7 +10,7 @@ export interface ThreadState {
   isSearching: boolean;
 }
 
-export const THREAD_INITIAL_STATE: ThreadState = {
+export const THREAD_INITIAL_STATE: IThreadState = {
   threadSlug: '',
   posts: [],
   selectedPostId: '',

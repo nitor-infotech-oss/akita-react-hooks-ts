@@ -1,9 +1,9 @@
 import { Query } from '@datorama/akita';
 
 import { ThreadStore, threadStore } from './thread.store';
-import { ThreadState } from './thread.state';
+import { IThreadState } from './thread.state';
 
-export class ThreadQuery extends Query<ThreadState> {
+export class ThreadQuery extends Query<IThreadState> {
   constructor(protected store: ThreadStore) {
     super(store);
   }
