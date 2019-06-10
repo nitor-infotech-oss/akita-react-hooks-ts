@@ -13,19 +13,19 @@ export const Thread = () => {
 
   useEffect(() => {
     subscribeHelper(threadQuery.getCurrentPostId, setCurrentPostId);
-  });
+  }, []);
 
   useEffect(() => {
     subscribeHelper(threadQuery.getIsLoading, setIsLoading);
-  });
+  }, []);
 
   useEffect(() => {
     subscribeHelper(threadQuery.getCurrentPostComments, setCurrentPostComments);
-  });
+  }, []);
 
   useEffect(() => {
     subscribeHelper(threadQuery.getCurrentPost, setCurrentPost);
-  });
+  }, []);
 
   const closePost = () => {
     threadService.closeCurrentPost();

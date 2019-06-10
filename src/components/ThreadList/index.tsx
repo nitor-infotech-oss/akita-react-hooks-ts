@@ -14,15 +14,15 @@ export const ThreadList = () => {
 
   useEffect(() => {
     subscribeHelper(threadQuery.getThread, setThreads);
-  });
+  }, []);
 
   useEffect(() => {
     subscribeHelper(threadQuery.getIsSearching, setIsSearching);
-  });
+  }, []);
 
   useEffect(() => {
     subscribeHelper(threadQuery.getCurrentPostId, setCurrentPostId);
-  });
+  }, []);
 
   const openThread = (threadSlug: string, threadId: string) => {
     threadService.getPost(threadSlug, threadId);
