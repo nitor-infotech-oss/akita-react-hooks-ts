@@ -1,28 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import List from './List';
 import { threadService } from '../../core/threads/thread.service';
 import { threadQuery } from '../../core/threads/thread.query';
-import { subscribeHelper } from '../Utils/helpers';
+import { useSelector } from '../Utils/useSelector';
 
 import searchGif from '../../assets/searching.gif';
 
+const useThreadService = () => {
+  const threads = useSelector(threadQuery.thread, []); // property as selector
+  const isSearching = useSelector(threadQuery.getIsSearching, false); // function as selector
+  const currentPostId = useSelector(threadQuery.currentPostId, '');
+
+  return [threads, isSearching, currentPostId];
+};
+
 export const ThreadList = () => {
-  const [threads, setThreads] = useState();
-  const [isSearching, setIsSearching] = useState(false);
-  const [currentPostId, setCurrentPostId] = useState('');
-
-  useEffect(() => {
-    subscribeHelper(threadQuery.getThread, setThreads);
-  }, []);
-
-  useEffect(() => {
-    subscribeHelper(threadQuery.getIsSearching, setIsSearching);
-  }, []);
-
-  useEffect(() => {
-    subscribeHelper(threadQuery.getCurrentPostId, setCurrentPostId);
-  }, []);
+  const [threads, isSearching, currentPostId] = useThreadService();
 
   const openThread = (threadSlug: string, threadId: string) => {
     threadService.getPost(threadSlug, threadId);

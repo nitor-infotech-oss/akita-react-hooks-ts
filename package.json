@@ -1,22 +1,22 @@
 {
   "name": "akita-react-hooks-ts",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "@datorama/akita": "^3.15.1",
-    "@types/jest": "24.0.13",
-    "@types/node": "12.0.7",
-    "@types/react": "16.8.19",
+    "@datorama/akita": "^4.4.0",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.12",
+    "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-markdown": "^4.0.8",
+    "react-markdown": "^4.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
-    "typescript": "3.3.3333"
+    "typescript": "3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -53,18 +53,18 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@datorama/akita-cli": "^4.0.4",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-flowtype": "^3.10.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jest": "^22.6.4",
+    "@datorama/akita-cli": "^6.0.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-flowtype": "^3.11.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.2",
     "eslint-plugin-jsx-control-statements": "^2.2.1",
-    "eslint-plugin-react-hooks": "^1.6.0",
-    "husky": "^2.4.0",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "husky": "^3.0.0",
     "lint-staged": "^8.2.0",
     "prettier": "^1.18.2",
-    "tslint": "^5.17.0",
+    "tslint": "^5.18.0",
     "tslint-config-react-app": "^0.0.0",
     "tslint-react": "^4.0.0"
   }

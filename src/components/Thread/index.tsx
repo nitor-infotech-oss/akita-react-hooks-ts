@@ -1,31 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { threadService } from '../../core/threads/thread.service';
 import { threadQuery } from '../../core/threads/thread.query';
-import { subscribeHelper } from '../Utils/helpers';
+import { useSelector } from '../Utils/useSelector';
 import Comment from './Comment';
 
+const useThreadService = () => {
+  const comments = useSelector(threadQuery.currentPostComments, []);
+  const isLoading = useSelector(threadQuery.isLoading, false);
+  const currentPostId = useSelector(threadQuery.currentPostId, '');
+
+  return [comments, isLoading, currentPostId];
+};
+
 export const Thread = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [currentPostId, setCurrentPostId] = useState('');
-  const [currentPost, setCurrentPost] = useState();
-  const [comments, setCurrentPostComments] = useState();
-
-  useEffect(() => {
-    subscribeHelper(threadQuery.getCurrentPostId, setCurrentPostId);
-  }, []);
-
-  useEffect(() => {
-    subscribeHelper(threadQuery.getIsLoading, setIsLoading);
-  }, []);
-
-  useEffect(() => {
-    subscribeHelper(threadQuery.getCurrentPostComments, setCurrentPostComments);
-  }, []);
-
-  useEffect(() => {
-    subscribeHelper(threadQuery.getCurrentPost, setCurrentPost);
-  }, []);
+  const [comments, isLoading, currentPostId] = useThreadService();
 
   const closePost = () => {
     threadService.closeCurrentPost();
