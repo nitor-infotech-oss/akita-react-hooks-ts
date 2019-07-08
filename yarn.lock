@@ -1323,6 +1323,11 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@nitor-infotech/rxjs-use-selector@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@nitor-infotech/rxjs-use-selector/-/rxjs-use-selector-0.1.0.tgz#6d88cdbacf9a96568bfc17fd358a0211ec15df3e"
+  integrity sha512-C7EPt3f4+pP4ikfW3s/FVpJIxy19F3SraYv5+JibbAzCzLAA0T7zOxaJ9zfrCxOJVLK8yT766aCd/X5VuYhPRg==
+
 "@nodelib/fs.stat@^1.1.2":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"

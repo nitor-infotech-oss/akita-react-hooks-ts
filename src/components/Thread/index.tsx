@@ -2,7 +2,7 @@ import React from 'react';
 
 import { threadService } from '../../core/threads/thread.service';
 import { threadQuery } from '../../core/threads/thread.query';
-import useSelector from '../useSelector';
+import useSelector from '@nitor-infotech/rxjs-use-selector';
 import Comment from './Comment';
 
 const useThreadService = () => {

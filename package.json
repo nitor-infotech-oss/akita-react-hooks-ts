@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@datorama/akita": "^4.4.1",
+    "@nitor-infotech/rxjs-use-selector": "^0.1.0",
     "@types/jest": "24.0.15",
     "@types/node": "12.0.12",
     "@types/react": "16.8.23",
