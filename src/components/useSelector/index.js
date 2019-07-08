@@ -1,5 +1,5 @@
 import { useReducer, useEffect, useLayoutEffect, useRef } from 'react';
-import { subscribe, subscribeFunction } from './Subscriber';
+import { subscribe, subscribeFunction } from './Subscription';
 
 const useIsomorphicLayoutEffect =
   typeof window !== 'undefined' ? useLayoutEffect : useEffect;
@@ -33,3 +33,5 @@ export const useSelector = (selector, defaultValue) => {
 
   return selectedState;
 };
+
+export default useSelector;

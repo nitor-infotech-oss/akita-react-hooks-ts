@@ -1136,10 +1136,10 @@
     pluralize "7.0.0"
     shelljs "0.8.3"
 
-"@datorama/akita@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@datorama/akita/-/akita-4.4.0.tgz#9cf16111ca84fa2c0cb83b0512898d7d5dafcd10"
-  integrity sha512-6TdHoSe0vRm9EFhthQACcBbRWjtnrBV/04oh6lA8vcqNRuW2TJhbgBGrxcODvGD73Y+Pc74tqIL4RW/b7sSlgA==
+"@datorama/akita@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@datorama/akita/-/akita-4.4.1.tgz#075cb44a52959179ee654015987eea2b7eccbca5"
+  integrity sha512-FUtS4zaqNAgAY800txEJxs1JSgPsv36rpJHErpmjXLFc95T78Nwn8di0P3ymCkOUSE6NuiQ1cUmMxr5Gipjy1w==
   dependencies:
     schematics-utilities "^1.1.1"
     tslib "^1.9.0"

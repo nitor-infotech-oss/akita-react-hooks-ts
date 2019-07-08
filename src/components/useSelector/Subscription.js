@@ -1,7 +1,9 @@
 export const subscribe = (selector, setState) => {
-  const subscription = selector.subscribe(data => {
-    setState(data);
-  });
+  const subscription = selector
+    ? selector.subscribe(data => {
+        setState && setState(data);
+      })
+    : null;
 
   return () => {
     subscription && subscription.unsubscribe();

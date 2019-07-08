@@ -3,12 +3,12 @@ import React from 'react';
 import List from './List';
 import { threadService } from '../../core/threads/thread.service';
 import { threadQuery } from '../../core/threads/thread.query';
-import { useSelector } from '../Utils/useSelector';
+import { useSelector } from '../useSelector';
 
 import searchGif from '../../assets/searching.gif';
 
 const useThreadService = () => {
-  const threads = useSelector(threadQuery.thread, []); // property as selector
+  const threads = useSelector(threadQuery.thread, []); // es6 / ts property as selector
   const isSearching = useSelector(threadQuery.getIsSearching, false); // function as selector
   const currentPostId = useSelector(threadQuery.currentPostId, '');
 
