@@ -1,5 +1,7 @@
 # React, Akita, React-Hooks, TypeScript, ES6 App
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nitor-infotech-oss/akita-react-hooks-ts.svg)](https://greenkeeper.io/)
+
 This app is using [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/) and ES6, purely based on [React Hooks](https://reactjs.org/docs/hooks-intro.html) (Functional Components)
 
 Using TypeScript for connected functional components, UI components are using ESNext (ES6). [Akita](https://netbasal.gitbook.io/akita/) used for state management
