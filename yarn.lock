@@ -1154,10 +1154,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
   integrity sha512-6It2EVfGskxZCQhuykrfnALg7oVeiI6KclWSmGDqB0AiInVrTGB9Jp9i4/Ad21u9Jde/voVQz6eFX/eSg/UsPA==
 
-"@datorama/akita-cli@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@datorama/akita-cli/-/akita-cli-6.0.3.tgz#41c48c5f4e24bee54827447a2e5675b7c3b60eeb"
-  integrity sha512-mtDUHDEOl03JHddXPPZxZuODu/sGyFb3Npr+VjBEUYtJwqjeQFang570tk33vm/6DRkPkJQAyhzeIccIyZjHOQ==
+"@datorama/akita-cli@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@datorama/akita-cli/-/akita-cli-6.1.0.tgz#5631f8b33f70d1776fb9658534ed43b784bc2b9b"
+  integrity sha512-hxFsAUxW8tbvP92g2ZT4iaWXjD5KL47G/T7gcPc5H9smPjWA39rHO3zZYjAGQ/RahGRf9vFZV7rsTQA5VeRuRw==
   dependencies:
     find-package-json "1.2.0"
     inquirer-fuzzy-path "2.0.3"
