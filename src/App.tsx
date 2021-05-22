@@ -17,7 +17,6 @@ const App = () => {
           <Search />
         </div>
       </header>
-
       <Home />
     </div>
   );
