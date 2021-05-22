@@ -1,9 +1,9 @@
 import React from 'react';
 
+import useSelector from '@nitor-infotech/rxjs-use-selector';
 import List from './List';
 import { threadService } from '../../core/threads/thread.service';
 import { threadQuery } from '../../core/threads/thread.query';
-import useSelector from '@nitor-infotech/rxjs-use-selector';
 
 import searchGif from '../../assets/searching.gif';
 

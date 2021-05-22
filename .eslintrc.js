@@ -1,7 +1,13 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  parser: 'babel-eslint',
-  plugins: ['react', 'jest', 'flowtype', 'react-hooks'],
+  extends: [
+    'airbnb',
+    'plugin:prettier/recommended',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react', 'jest', 'react-hooks', '@typescript-eslint'],
   env: {
     browser: true,
     node: true,
@@ -10,10 +16,10 @@ module.exports = {
     jest: true,
   },
   settings: {
-    ecmascript: 6,
-    jsx: true,
-    flowtype: {
-      onlyFilesWithFlowAnnotation: true,
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     },
   },
   rules: {
@@ -29,7 +35,8 @@ module.exports = {
     'no-debugger': 0,
     'no-underscore-dangle': 0,
     'no-shadow': 0,
-    'no-unused-vars': [
+    'no-useless-constructor': 1,
+    '@typescript-eslint/no-unused-vars': [
       2,
       {
         vars: 'all',
@@ -39,7 +46,16 @@ module.exports = {
       },
     ],
     'import/first': 0,
-    'import/extensions': [2, 'always', { js: 'never', json: 'never' }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'import/no-named-as-default': 0,
     'arrow-body-style': 0,
     'no-else-return': 0,
@@ -52,7 +68,6 @@ module.exports = {
     'no-restricted-syntax': 0,
     'no-nested-ternary': 0,
     'import/prefer-default-export': 0,
-    'import/no-named-as-default': 0,
     curly: [2, 'all'],
 
     // React
@@ -94,36 +109,39 @@ module.exports = {
     'jest/no-identical-title': 'error',
     'jest/valid-expect': 'error',
 
+    // Typescript
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+
     // Flow
-    'flowtype/boolean-style': [2, 'boolean'],
-    'flowtype/define-flow-type': 1,
-    'flowtype/delimiter-dangle': 0,
-    'flowtype/generic-spacing': [2, 'never'],
-    'flowtype/no-primitive-constructor-types': 2,
-    'flowtype/no-types-missing-file-annotation': 2,
-    'flowtype/no-weak-types': [
-      2,
-      { Function: false, Object: false, any: false },
-    ],
-    'flowtype/object-type-delimiter': [2, 'comma'],
-    'flowtype/require-parameter-type': 0,
-    'flowtype/require-return-type': [
-      0,
-      'always',
-      {
-        annotateUndefined: 'never',
-      },
-    ],
-    'flowtype/require-valid-file-annotation': 2,
-    'flowtype/semi': [2, 'always'],
-    'flowtype/space-after-type-colon': [2, 'always'],
-    'flowtype/space-before-generic-bracket': [2, 'never'],
-    'flowtype/space-before-type-colon': [2, 'never'],
-    'flowtype/type-id-match': 0,
-    'flowtype/union-intersection-spacing': [2, 'always'],
-    'flowtype/use-flow-type': 1,
-    'flowtype/valid-syntax': 1,
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    // 'flowtype/boolean-style': [2, 'boolean'],
+    // 'flowtype/define-flow-type': 1,
+    // 'flowtype/delimiter-dangle': 0,
+    // 'flowtype/generic-spacing': [2, 'never'],
+    // 'flowtype/no-primitive-constructor-types': 2,
+    // 'flowtype/no-types-missing-file-annotation': 2,
+    // 'flowtype/no-weak-types': [
+    //   2,
+    //   { Function: false, Object: false, any: false },
+    // ],
+    // 'flowtype/object-type-delimiter': [2, 'comma'],
+    // 'flowtype/require-parameter-type': 0,
+    // 'flowtype/require-return-type': [
+    //   0,
+    //   'always',
+    //   {
+    //     annotateUndefined: 'never',
+    //   },
+    // ],
+    // 'flowtype/require-valid-file-annotation': 2,
+    // 'flowtype/semi': [2, 'always'],
+    // 'flowtype/space-after-type-colon': [2, 'always'],
+    // 'flowtype/space-before-generic-bracket': [2, 'never'],
+    // 'flowtype/space-before-type-colon': [2, 'never'],
+    // 'flowtype/type-id-match': 0,
+    // 'flowtype/union-intersection-spacing': [2, 'always'],
+    // 'flowtype/use-flow-type': 1,
+    // 'flowtype/valid-syntax': 1,
+    // 'react-hooks/rules-of-hooks': 'error',
+    // 'react-hooks/exhaustive-deps': 'warn',
   },
 };
