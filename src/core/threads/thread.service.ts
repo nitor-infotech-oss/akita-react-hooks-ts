@@ -3,6 +3,7 @@ import { ThreadStore, threadStore } from './thread.store';
 const BASE_URL = 'https://www.reddit.com/r/';
 
 export class ThreadService {
+  // eslint-disable-next-line no-useless-constructor
   constructor(private store: ThreadStore) {}
 
   public closeCurrentPost = () => {
